@@ -1,10 +1,12 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Provider } from 'react-redux';
+import Store from './Store';
+import Counter from './Components/Counter';
 
 const App = () => (
-  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    <Text style={{ fontSize: 28 }}>Hello World!</Text>
-  </View>
+  <Provider store={Store}>
+    <Counter />
+  </Provider>
 );
 
 export default App;
