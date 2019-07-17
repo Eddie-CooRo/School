@@ -1,20 +1,10 @@
-import React, { Component } from 'react';
-import { Provider } from 'react-redux';
-import store from './Reducers/index';
-import CounterAction from './Actions/CounterAction';
+import React from 'react';
+import { View, Text } from 'react-native';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <Provider store={store}>
-        <CounterAction />
-      </Provider>
-    );
-  }
-}
+const App = () => (
+  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <Text style={{ fontSize: 28 }}>Hello World!</Text>
+  </View>
+);
 
 export default App;
