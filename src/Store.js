@@ -1,4 +1,5 @@
 import { createStore } from 'redux';
+import * as Actions from './Actions/Types';
 
 const initialState = {
   count: 0
@@ -6,12 +7,12 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'INCREMENT':
+    case Actions.COUNTER_INCREMENT:
       return {
         count: state.count + 1
       };
 
-    case 'DECREMENT':
+    case Actions.COUNTER_DECREMENT:
       return {
         count: state.count - 1
       };

@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StatusBar, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
+import * as Actions from '../Actions/Types';
 
 const Counter = props => {
   const { dispatch, count } = props;
@@ -27,7 +28,7 @@ const Counter = props => {
           backgroundColor: 'coral',
           borderRadius: 5
         }}
-        onPress={() => dispatch({ type: 'INCREMENT' })}
+        onPress={() => dispatch({ type: Actions.COUNTER_INCREMENT })}
       >
         <Text style={{ fontSize: 28, color: 'white' }}>+</Text>
       </TouchableOpacity>
@@ -47,7 +48,7 @@ const Counter = props => {
           backgroundColor: 'coral',
           borderRadius: 5
         }}
-        onPress={() => dispatch({ type: 'DECREMENT' })}
+        onPress={() => dispatch({ type: Actions.COUNTER_DECREMENT })}
       >
         <Text style={{ fontSize: 28, color: 'white' }}>-</Text>
       </TouchableOpacity>
