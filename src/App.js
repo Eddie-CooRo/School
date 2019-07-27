@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import PDFLib, { PDFDocument, PDFPage } from 'react-native-pdf-lib';
+import { PDFDocument, PDFPage } from 'react-native-pdf-lib';
 
 class App extends Component {
   render() {
