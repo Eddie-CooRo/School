@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
+import { Card } from './Components';
 
 class App extends Component {
   render() {
@@ -12,14 +13,7 @@ class App extends Component {
           backgroundColor: '#F8F8FF'
         }}
       >
-        <Text
-          style={{
-            fontSize: 28,
-            color: 'black'
-          }}
-        >
-          Hello there!
-        </Text>
+        <Card subtitle='...' borderColor='coral' />
       </View>
     );
   }
