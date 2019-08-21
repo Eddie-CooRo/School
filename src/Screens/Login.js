@@ -39,8 +39,8 @@ class LoginPage extends Component {
 
 const mapStateToProps = state => {
   return {
-    firstName: state.firstName,
-    lastName: state.lastName
+    firstName: state.auth.firstName,
+    lastName: state.auth.lastName
   };
 };
 
