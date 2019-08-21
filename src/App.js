@@ -1,28 +1,14 @@
-import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import React from 'react';
+import { Provider } from 'react-redux';
+import { Store } from './Reducers';
+import Router from './Router';
 
-class App extends Component {
-  render() {
-    return (
-      <View
-        style={{
-          flex: 1,
-          justifyContent: 'center',
-          alignItems: 'center',
-          backgroundColor: '#F8F8FF'
-        }}
-      >
-        <Text
-          style={{
-            fontSize: 28,
-            color: 'black'
-          }}
-        >
-          Hello there!
-        </Text>
-      </View>
-    );
-  }
-}
+const App = () => {
+  return (
+    <Provider store={Store}>
+      <Router />
+    </Provider>
+  );
+};
 
 export default App;
