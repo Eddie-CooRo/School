@@ -1,7 +1,23 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
+import { fromJS } from 'immutable';
 
 class App extends Component {
+  constructor() {
+    super();
+
+    this.state = fromJS({
+      a: 'test',
+      b: 2,
+      c: {
+        x: 'x',
+        y: 'y',
+        z: 'z',
+        letters: ['q', 'w', 'e', 'r', 't', 'y']
+      }
+    });
+  }
+
   render() {
     return (
       <View
@@ -18,7 +34,7 @@ class App extends Component {
             color: 'black'
           }}
         >
-          Hello there!
+          {this.state.toJS().a}
         </Text>
       </View>
     );
